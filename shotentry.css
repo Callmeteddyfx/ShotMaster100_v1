@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color1: #10af38;
+    --color2: #f0f0f0;
+    --color3: #34C759;
+    --text-color1: #636363;
+    --livefgpercent-size: 70px;
+    --object-padding: 15px;
+    --object-height: 50px;
+    --object-border-radius: 30px;
+    --btn-size-1: 50px;
+    font-size: 1rem;
+    font-family: "Montserrat", serif;
+}
+
+
+body,html{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#datecontainer{
+    flex: 0.15;
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: var(--color3);
+}
+
+#todaysdate{
+    margin: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.01rem;
+    font-weight: 500;
+    color: var(--text-color1);
+}
+
+#statcontainer{
+    flex: 2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+#livedivcontainer, .layupscontainer{
+    width: 80%;
+    height: var(--object-height);
+    margin: 5px;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--object-padding);
+    border-radius: var(--object-border-radius);
+}
+
+#livefgpercent{
+    width: var(--livefgpercent-size);
+    height: var(--livefgpercent-size);
+    background-color: white;
+    border-radius: 100%;
+}
+
+.layupscontainer{
+    padding: 20px;
+}
+
+#livefg{
+    flex: 1;
+    color: #34C759;
+    font-size: 36px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#layups-text-container{
+    flex: 1;
+    padding: 5px;
+}
+
+h2,p{
+    padding: 0;
+    margin: 0;
+    color: var(--color3);
+    font-weight: 500;
+}
+
+p{
+    color: var(--text-color1);
+    margin-left: 10px;
+    display: flex;
+    align-items: end;
+}
+
+#layupsvalue-container{
+    display: flex;
+}
+
+#layupsvalue,#midrangevalue,#threepointervalue,#cornerthreevalue,#freethrowvalue,#freestylevalue{
+    font-weight: 600;
+    font-size: 30px;
+    color: var(--text-color1);
+}
+
+#btns-container{
+    display: flex;
+}
+
+.add-btns,.subtract-btns{
+    width: var(--btn-size-1);
+    height: var(--btn-size-1);
+    border: none;
+    font-size: 2rem;
+    border-radius: 100%;
+    color: white;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btns{
+    background-color: var(--color1);
+}
+
+.subtract-btns{
+    background-color: red;
+}
+
+/* Footer Buttons */
+#buttoncontainer{
+    flex: 0.25;
+    overflow-x: hidden;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+
+#resetbtn,#Endbtn{
+    height: 50px;
+    margin: 0.25rem;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+
+#resetbtn{
+    flex: 1;
+    margin-left: 0.5rem;
+    background-color: var(--color1);
+}
+
+#Endbtn{
+    flex: 1;
+    margin-right: 0.5rem;
+    background-color: red;
+}
+

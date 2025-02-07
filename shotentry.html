@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShotMaster100</title>
+    <link rel="stylesheet" href="shotentry.css"/>
+</head>
+<body>
+    <div id="datecontainer">
+        <h1>Today's Stats</h1>
+        <p id="todaysdate">0/0/0000</p>
+    </div>
+
+    <div id="livedivcontainer">
+        <p id="livefg">Live FG%</p>
+        <div id="livefgpercent"></div>
+    </div>
+
+    <div id="statcontainer">
+        <!-- Layups -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Layups</h2>
+                <div id="layupsvalue-container">
+                    <p id="layupsvalue">0</p>
+                    <p>out of 15</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minuslayups" class="subtract-btns">-</button>
+            <button id="addlayups" class="add-btns">+</button>
+        </div>
+        </div>
+
+        <!-- Mid Range -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Mid Range</h2>
+                <div id="layupsvalue-container">
+                    <p id="midrangevalue">0</p>
+                    <p>out of 15</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minusmidrange" class="subtract-btns">-</button>
+            <button id="addmidrange" class="add-btns">+</button>
+        </div>
+        </div>
+
+        <!-- Three Pointers -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Three Pointers</h2>
+                <div id="layupsvalue-container">
+                    <p id="threepointervalue">0</p>
+                    <p>out of 20</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minusthreepointer" class="subtract-btns">-</button>
+            <button id="addthreepointer" class="add-btns">+</button>
+        </div>
+        </div>
+
+        <!-- Corner Threes -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Corner Threes</h2>
+                <div id="layupsvalue-container">
+                    <p id="cornerthreevalue">0</p>
+                    <p>out of 15</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minuscornerthree" class="subtract-btns">-</button>
+            <button id="addcornerthree" class="add-btns">+</button>
+        </div>
+        </div>
+
+        <!-- Free Throws -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Free Throws</h2>
+                <div id="layupsvalue-container">
+                    <p id="freethrowvalue">0</p>
+                    <p>out of 15</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minusfreethrows" class="subtract-btns">-</button>
+            <button id="addfreethrows" class="add-btns">+</button>
+        </div>
+        </div>
+
+        <!-- FreeStyle -->
+        <div class="layupscontainer">
+            <div id="layups-text-container">
+                <h2>Freestyle</h2>
+                <div id="layupsvalue-container">
+                    <p id="freestylevalue">0</p>
+                    <p>out of 20</p>
+                </div>
+            </div>
+        <div id="btns-container">
+            <button id="minusfreestyle" class="subtract-btns">-</button>
+            <button id="addfreestylevalue" class="add-btns">+</button>
+        </div>
+        </div>
+
+    </div>
+    <div id="buttoncontainer">
+        <button id="resetbtn">RESET SESSION</button>
+        <button id="Endbtn">END SESSION</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    <script src="shotentry.js"></script>
+</body>
+</html>
