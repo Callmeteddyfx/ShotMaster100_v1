@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Make sure the website looks like an app when added to the home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShotMaster100</title>
     <link rel="stylesheet" href="shotentry.css"/>
@@ -10,6 +14,16 @@
     <div id="datecontainer">
         <h1>Today's Stats</h1>
         <p id="todaysdate">0/0/0000</p>
+    </div>
+
+    <div id="resetwrapper">
+    <div id="resetsessioncontainer">
+        <p id="resettxt">Are you sure you would like to reset?</p>
+        <div id="resetbtn-container">
+            <button id="cancel-reset">Cancel</button>
+            <button id="proceed-reset">Proceed</button>
+            </div>
+        </div>
     </div>
 
     <div id="livedivcontainer">
@@ -109,6 +123,7 @@
         </div>
 
     </div>
+
     <div id="buttoncontainer">
         <button id="resetbtn">RESET SESSION</button>
         <button id="Endbtn">END SESSION</button>
