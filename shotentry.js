@@ -22,7 +22,7 @@ function updatefgpercent(bar,value) {
 
 updatefgpercent(bar1, 0);
 
-/* Get today's birthday */
+/* Get today's date */
 function todaysDate(){
     const date = new Date().toLocaleDateString();
     const text = document.getElementById('todaysdate');
@@ -98,3 +98,31 @@ document.getElementById('proceed-reset').addEventListener( 'click', function(){
     freestylevalue.textContent = 0;
     }
 )
+
+
+/* Save Session */
+document.getElementById('Endbtn').addEventListener('click', function(){
+    const date = new Date();
+
+    const todayShots = {
+        fg: points / 100,
+        layup: layupsvalue.textContent,
+        midrange: midrangevalue.textContent,
+        threepointer: threepointervalue.textContent,
+        cornerthree: cornerthreevalue.textContent,
+        freethrows: freethrowvalue.textContent,
+        freestyle: freestylevalue.textContent,
+    }
+
+    //get saved stats
+    let stats = JSON.parse(localStorage.getItem("stats")) || [];
+
+    //Add the new objects to the array
+    stats.push({
+        date: date,
+        shots: todayShots
+    });
+
+    //Save the updated array to localStorage
+    localStorage.setItem('stats', JSON.stringify(stats));
+});
