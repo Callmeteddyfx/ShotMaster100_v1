@@ -61,7 +61,7 @@ h1{
 
 #todaysdate{
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: flex-end;
     font-size: 1.01rem;
@@ -81,9 +81,6 @@ h1{
     scrollbar-width: none;
 }
 
-#livedivcontainer{
-    flex: 0.1;
-}
 
 #livedivcontainer, .layupscontainer{
     width: 80%;
@@ -95,6 +92,11 @@ h1{
     align-items: center;
     padding: var(--object-padding);
     border-radius: var(--object-border-radius);
+}
+
+#livedivcontainer{
+    flex: 0.1;
+    margin: 0;
 }
 
 #livefgpercent{
