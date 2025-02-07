@@ -8,8 +8,8 @@
     --livefgpercent-size: 70px;
     --object-padding: 15px;
     --object-height: 50px;
-    --object-border-radius: 30px;
-    --btn-size-1: 50px;
+    --object-border-radius: 20px;
+    --btn-size-1: 2.5rem;
     font-size: 1rem;
     font-family: "Montserrat", serif;
 }
@@ -28,7 +28,28 @@ body,html{
 }
 
 #datecontainer{
-    flex: 0.15;
+    flex: 0.15;   
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+}
+
+#datecontainer2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#go-back{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 5%;
+    top: 2%;
+    transform: translate(20%, 20%);
 }
 
 h1{
@@ -67,7 +88,7 @@ h1{
 #livedivcontainer, .layupscontainer{
     width: 80%;
     height: var(--object-height);
-    margin: 5px;
+    margin: 10px;
     background-color: var(--color2);
     display: flex;
     justify-content: center;
@@ -84,6 +105,7 @@ h1{
 }
 
 .layupscontainer{
+    height: 2rem;
     padding: 20px;
 }
 
@@ -107,6 +129,7 @@ h2,p{
     margin: 0;
     color: var(--color3);
     font-weight: 500;
+    font-size: 20px;
 }
 
 p{
@@ -114,6 +137,7 @@ p{
     margin-left: 10px;
     display: flex;
     align-items: end;
+    font-size: 15px;
 }
 
 #layupsvalue-container{
@@ -122,7 +146,7 @@ p{
 
 #layupsvalue,#midrangevalue,#threepointervalue,#cornerthreevalue,#freethrowvalue,#freestylevalue{
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.5rem;
     color: var(--text-color1);
 }
 
@@ -191,20 +215,20 @@ p{
 /* Reset Session */
 #resetsessioncontainer{
     position: fixed;
-    z-index: 1000;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     height: 200px;
     width: 300px;
     padding: 10px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1rem);
     box-shadow: 1px 1px 10px -3px black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: var(--object-border-radius);
+    z-index: 20;
 }
 
 #resettxt{
@@ -241,7 +265,7 @@ p{
     font-family: "Montserrat", serif;
     font-size: 15px;
     font-weight: 600;
-    border-radius: 1rem;
+    border-radius: 0.8rem;
     color: white;
     width: 100%;
 }
