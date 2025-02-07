@@ -159,19 +159,19 @@ p{
     margin: 0.25rem;
     color: white;
     border: 0;
-    border-radius: 8px;
+    border-radius: 1rem;
     font-size: 0.95rem;
 }
 
 #resetbtn{
     flex: 1;
-    margin-left: 0.5rem;
+    margin-left: 0.9rem;
     background-color: var(--color1);
 }
 
 #Endbtn{
     flex: 1;
-    margin-right: 0.5rem;
+    margin-right: 0.9rem;
     background-color: red;
 }
 
