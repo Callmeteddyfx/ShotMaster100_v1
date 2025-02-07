@@ -68,7 +68,7 @@ p,div{
 }
 
 #bodycontainer{
-    flex: 1.5;
+    flex: 2;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -100,8 +100,7 @@ p,div{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 5px;
+    grid-template-rows: repeat(3, auto);
     justify-items: center;
 }
 
@@ -128,8 +127,8 @@ p,div{
 }
 
 .percent{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -137,8 +136,8 @@ p,div{
 }
 
 #layuppercent{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 #layuptext, #midrangetext,#threepointertext,#cornerthreetext,#freethrowtext,#freestyletext{
