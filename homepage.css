@@ -68,7 +68,7 @@ p,div{
 }
 
 #bodycontainer{
-    flex: 2;
+    flex: 1.5;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -123,6 +123,7 @@ p,div{
     color: white;
     background-color: var(--universal-color1);
     border-radius: 15px;
+    margin-bottom: 20px;
     box-shadow: 0px 0px 10px -5px black;
 }
 
