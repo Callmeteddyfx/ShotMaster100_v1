@@ -125,4 +125,7 @@ document.getElementById('Endbtn').addEventListener('click', function(){
 
     //Save the updated array to localStorage
     localStorage.setItem('stats', JSON.stringify(stats));
+
+    /* Open achiements */
+    location.href = 'history.html';
 });
