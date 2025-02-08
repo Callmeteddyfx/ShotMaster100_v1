@@ -160,6 +160,7 @@ p{
     cursor: pointer;
     width: var(--btn-size-1);
     height: var(--btn-size-1);
+    object-fit: cover;
     border: none;
     font-size: 2rem;
     border-radius: 100%;
