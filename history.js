@@ -43,7 +43,8 @@ function loadStats(){
            <li>
                 <p id="shots">Layups</p>
                 <p id="fraction">${layups} out of 15</p>
-                <p id="percentage">${Math.round((layups/15)* 100)}%</p>
+                <p id="percentage">${Math.round((layups/15)* 100)
+                }%</p>
              </li>
              <li>
                 <p id="shots">Midrange</p>
@@ -75,6 +76,13 @@ function loadStats(){
             </div>
             `
             date.textContent = lastThreeStats[i].date;
+            
+                /* Layup progress indicator */
+                const items = document.querySelectorAll('#statvalues li');
+                items.forEach(item => {
+                    console.log(item.querySelector('percentage')); // "Item 1", "Item 2", "Item 3"
+                });
+        
 
             list.appendChild(newDiv);
         };
