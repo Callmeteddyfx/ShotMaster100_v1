@@ -109,6 +109,7 @@ ul{
     list-style-type: none;
 }
 
+
 #listitem1{
     width: 80%;
     padding: 1rem;
@@ -151,7 +152,31 @@ ul{
     align-content: center;
 }
 
+#statvalues li p {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  justify-self: end;
+}
+
+#statvalues li #percentage {
+    justify-self: end;
+}
+
+#statvalues li #shots {
+    justify-self:start;
+}
+
+#statvalues li:first-child #fraction{
+    justify-self:center;
+}
+
 #statvalues li:first-child{
+    font-weight: 700;
     padding-top: 0;
     margin-top: 0;
+}
+
+p {
+    display: flex;
+
 }

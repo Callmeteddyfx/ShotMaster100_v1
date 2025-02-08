@@ -81,7 +81,7 @@ function formatDate(string){
 }
 
 function loadStats(){
-    const stats = JSON.parse(localStorage.getItem("stats")) || [];;
+    const stats = JSON.parse(localStorage.getItem("stats")) || [];
     
     if (!stats){
         noStatsAvailable();
