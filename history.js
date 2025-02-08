@@ -28,7 +28,14 @@ function loadStats(){
             const cornerthree = lastThreeStats[i].shots.cornerthree;
             const freethrows = lastThreeStats[i].shots.freethrows;
             const freestyle = lastThreeStats[i].shots.freestyle;
+
+            /* Varables Used to track previous levels and set the colour as required */
             let layupsprog;
+            let midrangeprog;
+            let threepointerprog;
+            let cornerthreeprog;
+            let freethrowsprog;
+            let freestyleprog;
 
             /* Layup progress indicator */
             if(i==2){
