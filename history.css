@@ -91,24 +91,67 @@ h1{
 }
 
 ul{
+    list-style-type: none;
+    overflow-y: none;
+    overflow-x: none;
+    margin: 0;
+    padding: 0;
+}
+
+#statslist{
     padding: 0;
     margin: 0;
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style-type: none;
 }
 
-li{
+#listitem1{
     width: 80%;
     padding: 1rem;
-    height: 10rem;
+    height: auto;
     background-color: var(--background-color-2);
     border-radius: var(--container-border-radius); 
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-li:not(:first-child){
+#listitem1:not(:first-child){
+    margin-top: 0;
+}
+
+#date-container{
+    width: 100%;
+    height: 2rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stats-value-container{
+    width: 100%;
+    padding: 0;
+    margin-top: 0;
+}
+
+#statvalues li{
+    width: 100%;
+    height: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+}
+
+#statvalues li:first-child{
+    padding-top: 0;
     margin-top: 0;
 }

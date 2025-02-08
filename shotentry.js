@@ -127,5 +127,5 @@ document.getElementById('Endbtn').addEventListener('click', function(){
     localStorage.setItem('stats', JSON.stringify(stats));
 
     /* Open achiements */
-    location.href = 'history.html';
+    window.location.replace('history.html');
 });
