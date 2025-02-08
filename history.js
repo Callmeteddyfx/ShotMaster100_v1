@@ -9,7 +9,7 @@ function loadStats(){
     const stats = JSON.parse(localStorage.getItem("stats")) || [];
 
     if ((stats.length - 1) >= 3){
-        const lastThreeStats = stats.slice(-3);
+        const lastThreeStats = stats.slice(-3).reverse();
  
         for (let i=0; i < lastThreeStats.length; i++){
             /* Format Date */
@@ -28,13 +28,25 @@ function loadStats(){
             const cornerthree = lastThreeStats[i].shots.cornerthree;
             const freethrows = lastThreeStats[i].shots.freethrows;
             const freestyle = lastThreeStats[i].shots.freestyle;
+            let layupsprog;
+
+            /* Layup progress indicator */
+            if(i==2){
+            layupsprog = `<p id="percentage" style = 'color: black;'>${Math.round((layups/15)* 100)}%</p>`
+                } else if(lastThreeStats[i+1].shots.layup < layups){
+            layupsprog = `<p id="percentage" style = 'color: red;'>${Math.round((layups/15)* 100)}%</p>`
+                } else if (lastThreeStats[i+1].shots.layup > layups){
+            layupsprog = `<p id="percentage" style = 'color: green;'>${Math.round((layups/15)* 100)}%</p>`
+            } else {
+            layupsprog = `<p id="percentage" style = 'color: black;'>${Math.round((layups/15)* 100)}%</p>`
+            };
 
             const newDiv = document.createElement('li');
             newDiv.id = 'listitem1';
             newDiv.innerHTML = `
           <p id = 'Date'>${simplifiedDate}</p>
           <div id="stats-value-container">
-          <ul id="statvalues">
+          <ul id="statvalues" class ="wrapper">
           <li>
                 <p id="shots">Types</p>
                 <p id="fraction">Shots</p>
@@ -43,9 +55,8 @@ function loadStats(){
            <li>
                 <p id="shots">Layups</p>
                 <p id="fraction">${layups} out of 15</p>
-                <p id="percentage">${Math.round((layups/15)* 100)
-                }%</p>
-             </li>
+               ${layupsprog}
+            </li>
              <li>
                 <p id="shots">Midrange</p>
                 <p id="fraction">${midrange} out of 15</p>
@@ -53,7 +64,7 @@ function loadStats(){
              </li>
              <li>
                 <p id="shots">Three Points</p>
-                <p id="fraction">${threepointer} out of 15</p>
+                <p id="fraction">${threepointer} out of 20</p>
                 <p id="percentage">${Math.round((threepointer/20)* 100)}%</p>
              </li>
              <li>
@@ -68,7 +79,7 @@ function loadStats(){
              </li>
              <li>
                 <p id="shots">Freestyle</p>
-                <p id="fraction">${freestyle} out of 15</p>
+                <p id="fraction">${freestyle} out of 20</p>
                 <p id="percentage">${Math.round((freestyle/20)* 100)}%</p>
              </li>
          
@@ -76,16 +87,10 @@ function loadStats(){
             </div>
             `
             date.textContent = lastThreeStats[i].date;
-            
-                /* Layup progress indicator */
-                const items = document.querySelectorAll('#statvalues li');
-                items.forEach(item => {
-                    console.log(item.querySelector('percentage')); // "Item 1", "Item 2", "Item 3"
-                });
-        
 
             list.appendChild(newDiv);
         };
+
     } else {
 
     }
