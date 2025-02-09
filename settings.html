@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=no">
+    <title>ShotMaster100 v1</title>
+    <link rel="stylesheet" href="settings.css"/>
+</head>
+<body>
+    <img id="back" onclick="window.location.replace('index.html')" src="./assets/arrow_back_24dp_666666_FILL0_wght400_GRAD0_opsz24.png">
+    <div id="settings-title">Settings</div>
+    <div id="container-div">
+        <ul id="settingsul">
+            <li>
+                <p>Graph</p>
+            </li>
+            <li  onclick="exportStats()">
+                <p>Export Stats</p>
+            </li>
+            <li>
+                <p>Reset Stats</p>
+            </li>
+        </ul>
+    </div>
+    <script src="settings.js"></script>
+</body>
+</html>
