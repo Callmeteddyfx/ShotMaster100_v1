@@ -112,7 +112,3 @@ function loadStats(){
 }
 
 loadStats();
-
-
-/* updatepercent(bar1,0.5); */
-window.onload = loadStats;

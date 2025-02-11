@@ -81,7 +81,8 @@ function loadStats(){
 
     } else {
         lastThreeStats = stats;
-
+      
+        for (let i=0; i < lastThreeStats.length; i++){
           /* Format Date */
           const date = new Date(lastThreeStats[i].date);
           const formattedDate = new Intl.DateTimeFormat('en-GB').format(date);
@@ -148,6 +149,6 @@ function loadStats(){
 
           list.appendChild(newDiv);
     };
-}
+}};
 
 loadStats();
