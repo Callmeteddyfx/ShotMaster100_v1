@@ -3,8 +3,10 @@ const { jsPDF } = window.jspdf;
 
 function exportStats(){
     const infoDiv = document.getElementById('info-div-container');
+    const stats = JSON.parse(localStorage.getItem('stats'));
 
-    infoDiv.innerHTML = '';
+if(stats){   
+     infoDiv.innerHTML = '';
     let newDiv = document.createElement('div');
     newDiv.id = 'info-div';
     newDiv.innerHTML = `<div id="close-btn-div">
@@ -22,6 +24,9 @@ function exportStats(){
               }, 0);
     infoDiv.appendChild(newDiv);
     infoDiv.style.display = 'block';
+} else {
+    alert('Stats unable to load or does not exist.')
+}
 }
 
 function closeinfodiv(){
@@ -63,18 +68,53 @@ doc.save("stats.pdf");
 function exportstatsascsv(){
     const stats = JSON.parse(localStorage.getItem('stats'));
 
-    const csvContent = "Date,Layups,Mid Range,Three Pointers\n" +
-    stats.map(row => `${row.date},${row.shots.layup},${row.shots.midrange},${row.shots.threepointer}`).join("\n");
+    const csvContent = "Date,Layups,Mid Range,Three Pointers,Corner Threes,Free Throws, Freestyle, FG%\n" +
+    stats.map(row => `${row.date},${row.shots.layup},${row.shots.midrange},${row.shots.threepointer},${row.shots.cornerthree},${row.shots.freethrows},${row.shots.freestyle},${row.shots.fg * 100 + ' %'}`).join("\n");
 
 const blob = new Blob([csvContent], { type: "text/csv" });
 const url = URL.createObjectURL(blob);
 const a = document.createElement("a");
 a.href = url;
-a.download = "shotsmaster-stats.csv";
+a.download = "ShotMaster100-stats.csv";
 a.click();
+}
+
+function deleteStats(){
+    const stats = JSON.parse(localStorage.getItem('stats'));
+   if(stats){
+        localStorage.removeItem('stats');
+        return alert('Stats Reset.');
+    } else {
+       return alert('No stats to return.');
+    }
 }
 
 function resetStats(){
     const infoDiv = document.getElementById('info-div-container');
+    const stats = JSON.parse(localStorage.getItem('stats'));
+
+    if(stats){   
+         infoDiv.innerHTML = '';
+        let newDiv = document.createElement('div');
+        newDiv.id = 'info-div';
+        newDiv.innerHTML = `<div id="close-btn-div">
+            <img id="close-btn" src="./assets/close_24dp_666666_FILL0_wght400_GRAD0_opsz24.png" onclick="closeinfodiv()">
+            </div>
+                <p id="info-text">You are about to delete your Stats history. This action is <strong>irreversible</strong>.</p>
+                <div id="info-btns">
+                <button id="cancel-btn" onclick="closeinfodiv()">Cancel</button>
+                <button id="accept-btn" onclick="deleteStats()">Proceed</button>
+                </div>`
+        
+                setTimeout(() => {
+                    document.getElementById('cancel-btn').style.backgroundColor = 'white';
+                    document.getElementById('cancel-btn').style.color = 'black';
+                    document.getElementById('accept-btn').style.backgroundColor = 'red';
+                  }, 0);
+        infoDiv.appendChild(newDiv);
+        infoDiv.style.display = 'block';
+    } else {
+        return alert('Stats unable to delete or does not exist.');
+    }
     infoDiv.style.display = 'block';
 }
