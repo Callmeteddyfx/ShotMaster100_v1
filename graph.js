@@ -80,6 +80,15 @@ function loadgraph(name){
                 data: listvalue,
                 backgroundColor: "blue",
                 fill: true,
+                tension: 0.1},
+                {
+                    label: 'Average Line',
+                    data: new Array(listvalue.length).fill(averageValue), // Fill the array with the average value
+                    borderColor: 'red',
+                    borderWidth: 2,
+                    borderDash: [5, 5], // Optional dashed line
+                    pointRadius: 0,
+                    fill: false
             }]
         },
         

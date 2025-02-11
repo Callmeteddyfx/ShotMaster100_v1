@@ -118,3 +118,13 @@ function resetStats(){
     }
     infoDiv.style.display = 'block';
 }
+
+function opengraph(){
+    const stats = JSON.parse(localStorage.getItem('stats'));
+
+    if (stats){
+        window.location.href = 'graph.html';
+    } else {
+        alert('Stats unavailable to compose graph. Start a session or refresh the page.')
+    }
+}

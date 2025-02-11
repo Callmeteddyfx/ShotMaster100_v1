@@ -44,12 +44,12 @@ body,html{
 }
 
 #go-back{
-    width: 35px;
-    height: 35px;
+    width:  1.4rem;
+    height:  1.4rem;
     position: absolute;
     left: 5%;
     top: 2%;
-    transform: translate(20%, 20%);
+    transform: translate(20%, 70%);
 }
 
 h1{

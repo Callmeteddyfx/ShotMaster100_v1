@@ -2,6 +2,7 @@
 
 :root{
     --graph-background-color: #F0F0F0;
+    --back-btn-size: 1.4rem;
 }
 
 
@@ -13,6 +14,15 @@ body,html{
     flex-direction: column;
     align-items: center;
     margin: 0;
+}
+
+#back{
+    width: var(--back-btn-size);
+    height: var(--back-btn-size);
+    position: absolute;
+    left: 1%;
+    top: 3.3%;
+    transform: translate(60%, 60%);
 }
 
 #dropdown-container{
