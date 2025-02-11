@@ -15,6 +15,23 @@ function loadgraph(){
         options: {
             responsive: true,
             maintainAspectRatio: false
+        },
+        plugins: {
+            zoom: {
+                pan: {
+                    enabled: true,
+                    mode: 'x', // Allow panning along x-axis
+                },
+                zoom: {
+                    wheel: {
+                        enabled: true, // Enable zooming with mouse wheel
+                    },
+                    pinch: {
+                        enabled: true // Enable zooming with pinch gestures
+                    },
+                    mode: 'x', // Zoom only along x-axis
+                }
+            }
         }
     });
 }
