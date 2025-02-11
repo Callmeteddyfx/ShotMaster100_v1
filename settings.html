@@ -9,6 +9,16 @@
 <body>
     <img id="back" onclick="window.location.replace('index.html')" src="./assets/arrow_back_24dp_666666_FILL0_wght400_GRAD0_opsz24.png">
     <div id="settings-title">Settings</div>
+    <div id="info-div-container">
+        <div id="info-div">
+            <div id="close-btn-div"><img id="close-btn" src="./assets/close_24dp_666666_FILL0_wght400_GRAD0_opsz24.png" onclick="closeinfodiv()"></div>
+            <p id="info-text"></p>
+            <div id="info-btns">
+            <button id="cancel-btn">cancel</button>
+            <button id="accept-btn">accept</button>
+            </div>
+        </div>
+    </div>
     <div id="container-div">
         <ul id="settingsul">
             <li>
@@ -17,11 +27,14 @@
             <li  onclick="exportStats()">
                 <p>Export Stats</p>
             </li>
-            <li>
+            <li onclick="resetStats()">
                 <p>Reset Stats</p>
             </li>
         </ul>
     </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="settings.js"></script>
 </body>
 </html>

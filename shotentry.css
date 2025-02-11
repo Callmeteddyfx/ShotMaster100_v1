@@ -225,6 +225,7 @@ p{
     width: 300px;
     padding: 10px;
     backdrop-filter: blur(1rem);
+    -webkit-backdrop-filter: blur(1rem);
     box-shadow: 1px 1px 10px -3px black;
     display: flex;
     flex-direction: column;

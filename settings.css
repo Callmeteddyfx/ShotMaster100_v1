@@ -16,6 +16,7 @@ div{
 :root{
     --btn-color: #F0F0F0;
     --back-size: 1.4rem;
+    --close-button-size: 1.2rem;
 }
 
 body,html{
@@ -73,3 +74,75 @@ li:nth-child(3){
     color: white;
     background-color: red;
 }
+
+
+/* Info Div */
+#info-div-container{
+    display: none;
+    position: fixed;
+    z-index: 20;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#info-div{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 1px 1px 10px -2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    z-index: 30;
+}
+
+#info-text{
+    color: white;
+    height: 50%;
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#close-btn-div{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+#close-btn{
+    width: var(--close-button-size);
+    height: var(--close-button-size);
+    border: 1px solid #a3a3a3;
+    border-radius: 100%;
+    background-color: white;
+    padding: 0.2rem;
+}
+
+#cancel-btn,#accept-btn{
+    width: 8rem;
+    border: none;
+    height: 2rem;
+    cursor: pointer;
+    margin: 0.25rem;
+    margin-bottom: 0;
+    color: black;
+    border: 0;
+    border-radius: 0.4rem;
+    font-family: "Montserrat", serif;
+    font-size: 0.90rem;
+    font-weight: 500;
+    box-shadow: 0px 0px 10px -5px black;
+    color: white;
+}
+
