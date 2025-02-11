@@ -12,7 +12,7 @@ if(stats){
     newDiv.innerHTML = `<div id="close-btn-div">
         <img id="close-btn" src="./assets/close_24dp_666666_FILL0_wght400_GRAD0_opsz24.png" onclick="closeinfodiv()">
         </div>
-            <p id="info-text">Would you like to export as a txt file or a pdf?</p>
+            <p id="info-text">Would you like to export as a TXT file or a PDF?</p>
             <div id="info-btns">
             <button id="cancel-btn" onclick="exportstatsaspdf()">Export as PDF</button>
             <button id="accept-btn" onclick="exportstatsascsv()">Export as CSV</button>
