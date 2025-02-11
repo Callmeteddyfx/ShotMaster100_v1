@@ -8,7 +8,6 @@
 </head>
 <body>
     <div id="dropdown-container">
-        <!-- <label for="options">Select what you w:</label> -->
 <select id="options">
     <option value="layup">Layups</option>
     <option value="midrange">Mid Range</option>
@@ -19,7 +18,11 @@
     <option value="fg">FG%</option>
 </select>
     </div>
-    <div id="graph-container"></div>
+    <div id="graph-container">
+        <canvas id="myChart"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="graph.js"></script>
 </body>
 </html>
