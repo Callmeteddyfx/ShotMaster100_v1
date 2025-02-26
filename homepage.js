@@ -87,7 +87,7 @@ function loadStats(){
         noStatsAvailable();
     } else {
         let lastitem = stats.length - 1;
-        fgPercent.textContent = (stats[lastitem].shots.fg * 100) + '%';
+        fgPercent.textContent = (Math.round(stats[lastitem].shots.fg * 100)) + '%';
         let date = formatDate(stats[lastitem].date);
         statstext.textContent = `Recent Stats: ${date}`;
         /* Layups */
