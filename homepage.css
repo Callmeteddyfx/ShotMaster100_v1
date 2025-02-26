@@ -60,6 +60,7 @@ p,div{
 }
 
 #settings{
+    cursor: pointer;
     margin-right: 35px;
     background-color: lightgray;
     padding: 5px;
@@ -114,6 +115,7 @@ p,div{
 }
 
 #startbtn{
+    cursor: pointer;
     width: var(--prgbar-container-width);
     height: 50px;
     border: none;

@@ -67,6 +67,7 @@ h1{
 }
 
 #close{
+    cursor: pointer;
     width: 25px;
     height: 25px;
     border-radius: 100%;

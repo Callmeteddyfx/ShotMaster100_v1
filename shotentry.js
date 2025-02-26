@@ -1,3 +1,42 @@
+let hours = 0, minutes = 0, seconds = 0;
+let interval;
+let finalTime;
+
+/* Workout Timer */
+
+function formatTime(time) {
+    return time < 10 ? `0${time}` : time;
+};
+
+function startStopwatch(){
+    if (!interval) {
+        interval = setInterval(() =>{
+            seconds++;
+        if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+        }
+        if (minutes === 60){
+            minutes = 0;
+            hours++;
+        }
+    }, 1000);
+    }
+}
+
+function stopStopwatch() {
+    clearInterval(interval);
+    interval = null;
+}
+
+function resetStopwatch() {
+    stopStopwatch();
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+}
+
+startStopwatch();
 
 /* Create an FG% progressbar */
 var fgpercent = document.getElementById("livefgpercent");
@@ -29,7 +68,7 @@ function todaysDate(){
     text.textContent = date;
 }
 
-/*Load today's birthday */
+/*Load today's date */
 window.onload = todaysDate;
 
 let points = 0; /* This value stores your points temporarily to calculate your FG% */
@@ -87,6 +126,7 @@ document.getElementById('cancel-reset').addEventListener( 'click', function(){
 document.getElementById('proceed-reset').addEventListener( 'click', function(){
     let resetdiv = document.getElementById('resetwrapper');
     resetdiv.style.display = 'none';
+    resetStopwatch();
 
     points = 0;
     updatefgpercent(bar1, 0);
@@ -102,6 +142,7 @@ document.getElementById('proceed-reset').addEventListener( 'click', function(){
 
 /* Save Session */
 document.getElementById('Endbtn').addEventListener('click', function(){
+    stopStopwatch();
     const date = new Date();
 
     const todayShots = {
@@ -112,6 +153,7 @@ document.getElementById('Endbtn').addEventListener('click', function(){
         cornerthree: cornerthreevalue.textContent,
         freethrows: freethrowvalue.textContent,
         freestyle: freestylevalue.textContent,
+        finalTime: `${formatTime(hours)}:${formatTime(minutes)}:${formatTime(seconds)}`,
     }
 
     //get saved stats
@@ -126,6 +168,8 @@ document.getElementById('Endbtn').addEventListener('click', function(){
     //Save the updated array to localStorage
     localStorage.setItem('stats', JSON.stringify(stats));
 
-    /* Open achiements */
+    /* Open achivements */
     window.location.replace('history.html');
 });
+
+

@@ -1,5 +1,5 @@
 var list = document.getElementById('statslist');
-var listdate = document.getElementById('listitem1 date')
+var listdate = document.getElementById('listitem1 date');
 
 document.getElementById('close').addEventListener('click', function(){
     window.location.replace('index.html');
@@ -7,6 +7,7 @@ document.getElementById('close').addEventListener('click', function(){
 
 function loadStats(){
     const stats = JSON.parse(localStorage.getItem("stats")) || [];
+    document.getElementById('finaltime').textContent = `Finishing time: ${stats[stats.length - 1].shots.finalTime}`;
 
     if ((stats.length - 1) >= 3){
         const lastThreeStats = stats.slice(-3).reverse();
