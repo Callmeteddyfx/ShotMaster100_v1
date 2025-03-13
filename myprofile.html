@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/png" href="./assets/SM.png">
+    <title>ShotMaster100 v1</title>
+    <link rel="stylesheet" href="myprofile.css"/>
+</head>
+<body>
+    <div id="editcontainer">
+        <img id="edit" src="./assets/edit2.png" onclick="openEdit()"></img>
+    </div>
+    <img id="profileimg" onclick="selectImage()"></img>
+    <div id="profilestatscontainer">
+        <div id="notescontainer"><p id="notes">notes</p></div>
+        <ul>
+            <li onclick="alert('Total points scored in a game.')">
+                <p class="number" id="pointsnumber">0</p>
+                <p>Points (PTS)</p>
+            </li>
+            <li onclick="alert('Passes leading to a made basket.')">
+                <p class="number" id="assistsnumber">0</p>
+                <p>Assists (AST)</p>
+            </li>
+            <li onclick="alert('Rebounds made on the offensive (opposing teams net).')">
+                <p class="number" id="orebnumber">0</p>
+                <p>Offensive Rebounds<br> (OREB)</p>
+            </li>
+            <li onclick="alert('Rebounds made on the offensive (your teams net).')">
+                <p class="number" id="drebnumber">0</p>
+                <p>Defensive Rebounds<br> (OREB)</p>
+            </li>
+            <li  onclick="alert(' Times you took the ball from the opponent.')">
+                <p class="number" id="stealsnumber">0</p>
+                <p>Steals (STL)</p>
+            </li>
+            <li  onclick="alert('Amounts of Shots blocked.')">
+                <p class="number" id="blocksnumber">0</p>
+                <p>Blocks (BLK)</p>
+            </li>
+            <li onclick="alert('Amounts of possessions you lost.')">
+                <p class="number" id="turnoversnumber">0</p>
+                <p>Turnovers (TO)</p>
+            </li>
+            <li onclick="alert('Personal fouls committed.')">
+                <p class="number" id="foulsnumber">0</p>
+                <p>Fouls (FO)</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Hidden file input -->
+    <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+    <div id="editprofilecontainer">
+        <div id="editprofilecontainer_inner">
+        <div id="editobject_container">
+            <textarea id="editnotes" maxlength="50" placeholder="Notes (50 char limit)."></textarea>
+            <ul class="editlist">
+                <li class="editlistitem">
+                    <input type="number" id="pointsentry" maxlength="3">
+                    Points
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="assistsentry" maxlength="3">
+                    Assists
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="orebentry" maxlength="3">
+                    Offensive <br> Rebounds
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="drebentry" maxlength="3">
+                    Defensive <br> Rebounds
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="stealsentry" maxlength="3">
+                    Steals
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="blocksentry" maxlength="3">
+                    Blocks
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="turnoversentry" maxlength="3">
+                    Turnovers
+                </li>
+                <li class="editlistitem">
+                    <input type="number" id="foulsentry" maxlength="3">
+                    Fouls
+                </li>
+                
+            </ul>
+        </div>
+            <div id="btncontainer">
+                <button id="cancel" onclick="cancel()">CANCEL</button>
+                <button id="save">SAVE</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="myprofile.js"></script>
+</html>

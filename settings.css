@@ -59,6 +59,7 @@ ul{
 }
 
 li{
+    cursor: pointer;
     margin: 1rem;
     padding: 0.8rem;
     height: 2rem;
@@ -70,7 +71,7 @@ li{
     justify-content: center;
 }
 
-li:nth-child(3){
+li:nth-child(4){
     color: white;
     background-color: red;
 }

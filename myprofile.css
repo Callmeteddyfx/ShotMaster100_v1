@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body,html{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scrollbar-width: none;
+}
+
+#editcontainer{
+    width: 90%;
+    flex: 0.25;
+    background-color: gainsboro;
+    margin: 1rem;
+    border-radius: 25px;
+    display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+#edit{
+    width: 2rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+#edit:hover{
+    cursor: pointer;
+}
+
+#profileimg{
+    cursor: pointer;
+    position: absolute;
+    object-fit: cover;
+    top: 5;
+    left: 5;
+    transform: translateY(50px);
+    width: 6rem;
+    height: 6rem;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: gainsboro;
+}
+
+#profilestatscontainer{
+    flex: 4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    width: 100%;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-self: center;
+    padding: 10px;
+}
+
+li{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p{
+    font-family: "Montserrat", serif;
+}
+
+.number{
+    margin: 0;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+#notescontainer{
+    border-radius: 25px;
+    background-color: gainsboro;
+    padding: 1rem;
+    margin: 1rem;
+    width: 80%;
+}
+
+#notes{
+    font-size: 1rem;
+}
+
+#editprofilecontainer{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+}
+
+#editprofilecontainer_inner{
+    opacity: 1;
+    background-color: #D9D9D9;
+    width: 80%;
+    height: 85%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0.5rem;
+}
+
+#editobject_container{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 9;
+}
+
+#btncontainer{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#editnotes{
+    width: 85%;
+    height: 100px;
+    border: 0;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Montserrat", serif;
+}
+
+#cancel,#save{
+    border: none;
+    padding: 10px;
+    margin: 0.5rem;
+    width: 40%;
+    border-radius: 10px;
+    color: white;
+    font-family: "Montserrat", serif;
+}
+
+#cancel{
+    background-color: red;
+}
+
+#save{
+    background-color: #06E12E;
+}
+
+.editlist{
+    list-style-type: none;
+}
+
+.editlistitem{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+}
+
+#pointsentry,#assistsentry,#orebentry,#drebentry,#stealsentry,#blocksentry,#turnoversentry,#foulsentry{
+    border-radius: 10px;
+    margin: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}

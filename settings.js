@@ -128,3 +128,7 @@ function opengraph(){
         alert('Stats unavailable to compose graph. Start a session or refresh the page.')
     }
 }
+
+function myprofile(){
+    window.location.href = 'myprofile.html';
+}
