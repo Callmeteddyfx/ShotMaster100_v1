@@ -48,6 +48,7 @@
                 <p>Fouls (FO)</p>
             </li>
         </ul>
+        <p id="rec_date">00/00/00</p>
     </div>
 
     <!-- Hidden file input -->
@@ -59,35 +60,35 @@
             <textarea id="editnotes" maxlength="50" placeholder="Notes (50 char limit)."></textarea>
             <ul class="editlist">
                 <li class="editlistitem">
-                    <input type="number" id="pointsentry" maxlength="3">
+                    <input type="number" id="pointsentry" max=999 value= 0>
                     Points
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="assistsentry" maxlength="3">
+                    <input type="number" id="assistsentry" max="999" value= 0>
                     Assists
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="orebentry" maxlength="3">
+                    <input type="number" id="orebentry" max="999" value= 0>
                     Offensive <br> Rebounds
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="drebentry" maxlength="3">
+                    <input type="number" id="drebentry" max="999" value= 0>
                     Defensive <br> Rebounds
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="stealsentry" maxlength="3">
+                    <input type="number" id="stealsentry" max="999" value= 0>
                     Steals
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="blocksentry" maxlength="3">
+                    <input type="number" id="blocksentry" max="999" value= 0>
                     Blocks
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="turnoversentry" maxlength="3">
+                    <input type="number" id="turnoversentry" max="999" value= 0>
                     Turnovers
                 </li>
                 <li class="editlistitem">
-                    <input type="number" id="foulsentry" maxlength="3">
+                    <input type="number" id="foulsentry" max="999" value= 0>
                     Fouls
                 </li>
                 
@@ -95,7 +96,7 @@
         </div>
             <div id="btncontainer">
                 <button id="cancel" onclick="cancel()">CANCEL</button>
-                <button id="save">SAVE</button>
+                <button id="save" onclick ="save()">SAVE</button>
             </div>
         </div>
     </div>
